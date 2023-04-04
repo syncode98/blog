@@ -1,0 +1,1 @@
+A simple blog website that utilises nodejs,expressjs,html,css,javascript

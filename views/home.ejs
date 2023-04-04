@@ -1,0 +1,24 @@
+<%- include("partials/header");  -%>
+<body>
+    
+    <h1 class="introduction"><%=startingContent%></h1>
+    
+    <% posts.forEach(function(element) { %>
+        <div class="boxes">
+        <h2 class="heading"><%=element.title %></h2>
+        <%let currentPost=element.post%>
+        
+        <% if (currentPost.length<100){%>
+            <p class="blogPost"><%=currentPost-%> </p>
+        <%}else{%>
+            <p class="blogPost"><%=currentPost.substring(0,100)+'...'-%></p>
+           
+
+        <%}%>
+        
+        <a href=<%="/posts/:"+element.title %>>Read More</a>
+    </div>
+    <% }) %>
+    
+</body>
+<%- include("partials/footer");  -%>
